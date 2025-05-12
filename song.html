@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,19 +18,25 @@
             height: 100vh;
             margin: 0;
         }
+
         .container {
             text-align: center;
         }
+
         .song-img {
             width: 300px;
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Listen to this song, it suits you!</h1>
-        <a href="https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo?si=58a38ec89a30412b"><img src="spcode-4cluDES4hQEUhmXj6TXkSo.jpeg" alt="Spotify Code" class="song-img"></a>
+        <a href="intent://track/4cluDES4hQEUhmXj6TXkSo#Intent;scheme=https;package=com.spotify.music;end;">
+            <img src="spcode-4cluDES4hQEUhmXj6TXkSo.jpeg" alt="Spotify Code" class="song-img">
+        </a>
     </div>
 </body>
+
 </html>
