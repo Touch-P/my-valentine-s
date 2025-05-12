@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day! <span class="heart">❤</span></h1>
+        <p>Hi!! Supakjira how are you doing. If you were tired, I'll stay here and hug you this time include eveytimes
+            you want❤️</p>
+        <button class="button" onclick="showPopup()">Click for Read!!</button>
+    </div>
+
+    <div id="lovePopup" class="popup">
+        <p>Tweet..tweet...sound of birds passing window with the wind. The room covered by golden light from sunrise in
+            morning. 'Wake up?' she said with sleepy voice and feeling confused like have a lot of qestions in her mind.
+            The gentle said 'Umm' like afaid something. Do you wanna tell something she said in a while he recalling. He
+            said something then she hug quickly. At moment he realized no matter she were, he will always be with her in
+            every situations 'good' or 'bad'.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div class="fixed-button-wrapper">
+        <button class="button fixed-button" onclick="window.location.href='song.html'">Go to Song</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('lovePopup').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('lovePopup').style.display = 'none';
+        }
+
+        function createFloatingHearts() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart-float");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.innerHTML = "❤";
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createFloatingHearts, 500);
+    </script>
+</body>
+
+</html>
